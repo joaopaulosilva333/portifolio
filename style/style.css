@@ -167,7 +167,7 @@ div#text {
 }
 
 #abilidades div {
-    max-width: 300px;
+    width: 300px;
     text-align: center;
     padding: 10px;
     height: 400px;
@@ -194,13 +194,14 @@ div#text {
     font-size: 40px;
 }
 .projetos {
+   
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin-top: 100px;
     margin-bottom: 50px;
     border: 1px solid green;
-    margin-left: 10px;
-    margin-right: 10px;
+    width: 80vw;
+    margin: auto;
+    margin-top: 100px;
 }
 .projetos div {
     padding: 10px;
@@ -376,7 +377,7 @@ footer div {
         font-size: 12px;
     }
     #abilidades img {
-        width: 80px;
+        width: 100px;
     }
     #js img {
         width: 60px;
@@ -431,7 +432,20 @@ footer div {
         width: 150px;
         border-radius: 10px 30px 10px 80px;
     }
+
+    section#abilidades {
+        display: grid;
+        grid-template-columns: 1fr;
+        
+    }
+
+    section#abilidades div {
+        height: 250px;
+    }
+
 }
+
+
 @media (max-width: 700px) {
     div#paralax> p {
         font-size: 20px;
@@ -476,12 +490,6 @@ footer div {
 
     div#text2 {
         max-width: 300px;
-    }
-
-    section#abilidades {
-        display: grid;
-        grid-template-columns: 1fr;
-        
     }
 
     section#abilidades div {
