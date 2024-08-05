@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
 const conteinerBtn = document.querySelector("#box-btn");
 const butaoCor = document.querySelector("#bt");
 const paralax = document.getElementById("paralax");
+const boxImagem = document.getElementById('imagem');
+const minhaImg = document.getElementById('minha-img');
 
 
     // Função para mudar a cor de fundo do body ao clicar
@@ -22,6 +24,8 @@ const paralax = document.getElementById("paralax");
         butaoCor.style.backgroundColor = "white";
         document.body.style.color = "#0f0f0fee";
         nav.style.backgroundColor = "#363636";
+        boxImagem.style.backgroundColor = 'transparent';
+        minhaImg.style.boxShadow = '2px 2px 4px';
        }else {
 
         document.body.style.background = "#000000";
@@ -31,6 +35,8 @@ const paralax = document.getElementById("paralax");
         butaoCor.style.backgroundColor = "black";
         document.body.style.color = "#ffffffc0";
         nav.style.backgroundColor = "black";
+        minhaImg.style.boxShadow = '0px 0px 0px'
+        boxImagem.style.backgroundColor = '#143614';
        }
 
     
