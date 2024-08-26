@@ -28,7 +28,7 @@ const minhaImg = document.getElementById('minha-img');
         minhaImg.style.boxShadow = '2px 2px 4px';
        }else {
 
-        document.body.style.background = "#000000";
+        document.body.style.background = "#030117";
         butaoCor.style.marginRight = "20px";
         butaoCor.style.marginLeft = "0";
         conteinerBtn.style.backgroundColor = "white";
@@ -96,7 +96,6 @@ const minhaImg = document.getElementById('minha-img');
         const windowHeight = window.innerHeight;
 
         if (boxPosition < windowHeight) {
-            console.log("aaaaaaa")
             scrollOpacity.style.opacity = "1"
         }else {
             scrollOpacity.style.opacity = "0"

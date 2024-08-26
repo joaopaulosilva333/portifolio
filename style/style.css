@@ -6,10 +6,11 @@
 :root {
     --cor1: #000000;
     --cor2: #0f0f0fee;
+    --cor3: #030117;
 }
 body {
     transition-duration: 0.5s;
-    background-color: var(--cor1);
+    background-color: var(--cor3);
     color: #ffffffc0;
 }
 header {
@@ -479,9 +480,13 @@ footer div {
         height: 150px;
         margin-left: 20px;
     }
+    nav {
+        justify-content: center;
+        gap: 20px;
+    }
     nav a {
-        font-size: 13px;
-        padding: 15px 15px 15px 15px;
+        font-size: 10px;
+        padding: 10px 10px 10px 10px;
     }
     div .pt-2> p {
         font-size: 12px;
