@@ -6,6 +6,22 @@ const boxImagem = document.getElementById('imagem');
 const minhaImg = document.getElementById('minha-img');
 
 
+const butaoAbrir = document.getElementById('abrirMenu')
+const butaoFechar = document.getElementById('fecharMenu')
+const nav = document.getElementById('menu')
+console.log(butaoAbrir)
+
+butaoAbrir.addEventListener('click', function() {
+    nav.style.width = '200px'
+    nav.style.height = '100vh'
+})
+
+nav.addEventListener('click', function() {
+    nav.style.width = '0'
+    nav.style.height = '0'
+})
+
+
     // Função para mudar a cor de fundo do body ao clicar
 
     butaoCor.addEventListener("click", function() {
@@ -36,8 +52,9 @@ const minhaImg = document.getElementById('minha-img');
         document.body.style.color = "#ffffffc0";
         nav.style.backgroundColor = "black";
         minhaImg.style.boxShadow = '0px 0px 0px'
-        boxImagem.style.backgroundColor = '#143614';
+        boxImagem.style.backgroundColor = '#5CE1E6';
        }
+       
 
     
     })

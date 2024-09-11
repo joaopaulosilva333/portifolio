@@ -7,32 +7,102 @@
     --cor1: #000000;
     --cor2: #0f0f0fee;
     --cor3: #030117;
+    --cor4: #5CE1E6;
+    --cor5: rgb(70, 68, 68);
 }
 body {
     transition-duration: 0.5s;
     background-color: var(--cor3);
     color: #ffffffc0;
 }
-header {
-    font-family: "Roboto Condensed", sans-serif;
-    margin-top: 200px;
+
+#abrirMenu {
+    color: #7ff2f6;
 }
+
+div#painel {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    background-color: black;
+}
+
+div#logo {
+    width: 100%;
+    height: 80vh;
+    background-color: black;
+    
+}
+
+div#logo img {
+    height: 40vh;
+    text-align: center;
+}
+
+div#papel-parede img {
+    width: 100%;
+    height: 80vh;
+}
+
+div#txt-papel-parede {
+    position: absolute;
+    top: 20%;
+    margin-left: 10px;
+    color: black;
+    font-family: cursive ;
+    font-size: 30px;
+    width: 300px;
+    font-weight: bolder;
+}
+p#p2 {
+    background-color: var(--cor4);
+    border-radius: 5px;
+    text-align: center;
+}
+
 nav {
     background-color: black;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
-    border: 5px groove black;
+    border-radius: 5px;
+    border: 1px solid var(--cor4);
     position: fixed;
-    width: 94vw;
+    width: 200px;
     z-index: 1;
     top: 0;
+    right: 0;
+    text-align: center;
+    width: 0;
+    height: 0;
+    transition: width 0.6s;
 }
-#nav {
-    display: flex;
-    justify-content: center;
+
+nav img {
+    width: 200px;
 }
+
+nav#menu a {
+    display: block;
+    font-size: 20px;
+    padding: 20px;
+}
+
+nav#menu p {
+    color: var(--cor4);
+    margin-top: 30px;
+}
+
+.abrir {
+    color: white;
+    font-size: 30px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#fecharMenu {
+    color: red;
+}
+
 @media (max-width: 600px) {
     ul {
         gap: 30px;
@@ -62,6 +132,7 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     margin: auto;
+    border: 1px solid white;
 }
 #bt {
     background-color: black;
@@ -86,8 +157,7 @@ nav a:hover {
     justify-content: space-between;
     padding: 10px;
     padding-top: 50px;
-    margin-top: 30px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 #paralax p {
     width: 300px;
@@ -124,16 +194,22 @@ main #minha-img {
     margin-top: 100px;
 }
 #apresentacao > div {
-    border: 1px solid green;
+    border: 1px solid var(--cor4);
 }
 div#imagem {
     max-width: 400px;
     margin: auto;
     border: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    box-shadow: 2px 2px 5px 2px rgba(0, 128, 0, 0.712);
     border-radius: 10px 40px 5px 5px;
+    background-color: var(--cor4);
 }
+
+#legendaImg {
+    color: var(--cor1);
+    text-align: center;
+}
+
 div#text {
     width: 400px;
     margin: auto;
@@ -150,7 +226,7 @@ div#text {
 .texto {
     font-size: 20px;
     line-height: 2em;
-    border: 1px solid green;
+    border: 1px solid var(--cor4);
     padding: 10px;
 }
 .texto > h1 {
@@ -190,7 +266,7 @@ div#text {
 .h1 {
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 150px;
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid var(--cor4);
     width: 200px;
     margin-left: 30px;
     font-size: 40px;
@@ -200,7 +276,7 @@ div#text {
     display: grid;
     grid-template-columns: 1fr 2fr;
     margin-bottom: 50px;
-    border: 1px solid green;
+    border: 1px solid var(--cor4);
     width: 80vw;
     margin: auto;
     margin-top: 100px;
@@ -242,13 +318,13 @@ div .pt-2> p {
 .pt-2 a {
     text-decoration: none;
     color: white;
-    background-color: green;
+    background-color: var(--cor5);
     padding: 10px;
     border-radius: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 .pt-2 a:hover {
-    background-color: rgb(70, 68, 68);
+    background-color: var(--cor4);
     transition-duration: 0.4s;
 }
 .cursoEmVideo img {
@@ -279,7 +355,7 @@ div .pt-2> p {
     margin: auto;
     margin-top: 50px;
     padding: 10px;
-    border-bottom: 1px solid green;
+    border-bottom: 1px solid var(--cor4);
 }
 #icones > .github {
     background-color: aliceblue;
@@ -297,7 +373,7 @@ div .pt-2> p {
     width: 50px;
 }
 footer {
-    background-color: rgba(0, 128, 0, 0.267);
+    background-color: var(--cor4);
     text-align: center;
 }
 footer a {
@@ -364,6 +440,13 @@ footer div {
       translate: 0 0;
     }
   }
+
+  @media (max-width: 1200px) {
+    div#txt-papel-parede {
+        font-size: 25px;
+    }
+  }
+
   @media (max-width: 1000px) {
 
     .texto {
@@ -406,7 +489,28 @@ footer div {
         margin-top: 150px;
     }
 }
+
+@media (max-width: 900px) {
+        div#txt-papel-parede {
+            font-size: 18px;
+            width: 200px;
+        }
+    }
   @media (max-width: 800px) {
+
+    div#logo {
+        text-align: center;
+    }
+
+    div#logo img {
+        height: 15vh;
+        
+    }
+
+    div#painel {
+        grid-template-columns: 18% 3fr ;
+    }
+
     div#paralax> p {
         height: 250px;
         font-size: 25px;
@@ -436,7 +540,7 @@ footer div {
         height: 30px;
     }
     div#imagem >#minha-img {
-        width: 150px;
+        width: 170px;
         border-radius: 10px 30px 10px 80px;
     }
 
@@ -470,6 +574,25 @@ footer div {
     }
 }
 @media (max-width: 600px) {
+
+    div#txt-papel-parede {
+        top: 60vh;
+    }
+
+    div#logo {
+        display: flex;
+        height: 40vh;
+    }
+
+    div#logo img {
+        width: 300px;
+        height: 300px;
+    }
+
+    div#painel {
+        display: block;
+    }
+
     .texto {
         font-size: 14px;
     }
@@ -512,8 +635,6 @@ footer div {
     }
 
     div#imagem {
-        box-shadow: 0px 0px 0px ;
-        background-color: #143614;
         padding: 10px;
         text-align: center;
         border-radius: 20px;
