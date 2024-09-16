@@ -5,11 +5,17 @@ const paralax = document.getElementById("paralax");
 const boxImagem = document.getElementById('imagem');
 const minhaImg = document.getElementById('minha-img');
 
+const span = document.querySelectorAll('.texto span')
+console.log(span)
+
+
+
+
+// Funções para abrir e fechar o menu lateral
 
 const butaoAbrir = document.getElementById('abrirMenu')
 const butaoFechar = document.getElementById('fecharMenu')
 const nav = document.getElementById('menu')
-console.log(butaoAbrir)
 
 butaoAbrir.addEventListener('click', function() {
     nav.style.width = '200px'
@@ -20,46 +26,6 @@ nav.addEventListener('click', function() {
     nav.style.width = '0'
     nav.style.height = '0'
 })
-
-
-    // Função para mudar a cor de fundo do body ao clicar
-
-    butaoCor.addEventListener("click", function() {
-
-        const styles = window.getComputedStyle(butaoCor);
-        const estiloParalax = window.getComputedStyle(paralax).backgroundColor;
-        const color = styles.backgroundColor;
-        const nav = document.getElementById("inicio");
-        
-
-       if(color === estiloParalax){
-        document.body.style.background = "rgb(211, 208, 208)";
-        butaoCor.style.marginRight = "0";
-        butaoCor.style.marginLeft = "20px";
-        conteinerBtn.style.backgroundColor = "black";
-        butaoCor.style.backgroundColor = "white";
-        document.body.style.color = "#0f0f0fee";
-        nav.style.backgroundColor = "#363636";
-        boxImagem.style.backgroundColor = 'transparent';
-        minhaImg.style.boxShadow = '2px 2px 4px';
-       }else {
-
-        document.body.style.background = "#030117";
-        butaoCor.style.marginRight = "20px";
-        butaoCor.style.marginLeft = "0";
-        conteinerBtn.style.backgroundColor = "white";
-        butaoCor.style.backgroundColor = "black";
-        document.body.style.color = "#ffffffc0";
-        nav.style.backgroundColor = "black";
-        minhaImg.style.boxShadow = '0px 0px 0px'
-        boxImagem.style.backgroundColor = '#5CE1E6';
-       }
-       
-
-    
-    })
-
-
    })
 
    // Funções de scroll
