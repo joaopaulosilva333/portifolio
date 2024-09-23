@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+.pano-fundo {
+    flex: 1;
+}
+
+.pano-fundo img {
+    width: 400px; 
+}
+
+.texto {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    flex: 2;
+}
+
+.texto span {
+    font-style: italic;
+}
+
+.texto h1 {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.texto p {
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.texto2 {
+    background-color: blanchedalmond;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.texto2 ul {
+    list-style-position: inside;
+}
+
+.texto2 li {
+    text-align: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.texto2 h2 {
+    margin-bottom: 20px;
+}
+
+.conteiner-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+}
+
+.botoes {
+    width: 400px;
+    padding: 10px 0;
+    text-align: center;
+    background-color: rgba(0, 255, 255, 0.433);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px ;
+}
+
+.botoes button {
+    padding: 15px 20px;
+    width: 300px;
+    margin: 10px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: 1px solid aqua;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.botoes button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+}
+
+.bloco {
+    width: 500px;
+    background-color: black;
+}
+
+.ou {
+    user-select: none;
+}
+
+/* INICIO PAINEL */
+
+.painel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.559);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.painel div {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 400px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.painel div label {
+    font-weight: bold;
+}
+
+.painel div input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid rgb(156, 153, 153);
+    outline: 0;
+}
+
+.painel div button {
+    padding: 7px;
+    border: 1px solid rgb(156, 153, 153);
+    background-color: rgba(0, 255, 255, 0.426);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FIM PAINEL */
+
+@media (max-width: 1000px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .pano-fundo {
+        margin: auto;
+    }
+
+    .texto {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 500px) {
+    .pano-fundo img {
+        width: 300px; 
+    }
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coleta de Dados</title>
+    <link rel="stylesheet" href="styles/converter.css">
+    <link rel="shortcut icon" href="../favicons/favicon2.ico" type="image/x-icon">
+</head>
+<body>
+
+    <section class="main">
+        <div class="pano-fundo">
+            <img src="../logos-joaodev/logo-joaodev-g-branca.png" alt="">
+        </div>
+
+        <div class="texto">
+            <h1>Olá, muito bem! vi que está enteressado em criar seu Website</h1>
+            <p>Para criar seu site vou precisar que me forneça os conteúdos que nele irei adicionar como: <span>(Logo, slogan, Textos, Imagens, Cores, Fontes e outros)</span>. Abaixo você pode me fornecer esses conteúdos preenchendo um formulário nesta página e ao finalizar será redirecionado ao meu WhatsApp.</p>
+
+            <p>Abaixo você também tem a opção de, caso resolva, me fornecer o conteúdo no momento da nossa reunião. Sinta-se à vontade para escolher qualquer uma das opções abaixo. </p>
+
+            <div class="texto2">
+                <h2>Deixando claro:</h2>
+                <ul>
+                    <li>Pelo WhatsApp vamos marcar uma data para uma reunião pelo Google Meets para a criação do projeto.</li>
+                    <li>Na nossa reunião, com base nas características do seu site criarei o orçamento do projeto. E assim repassarei para você todos os valores incluindo, é claro, o total.</li>
+                    <li>Vou precisar do seu conteúdo, caso não tenha algum elemento podemos cria-lo para você.</li>
+                </ul>
+            </div>
+
+            <div class="conteiner-btn">
+        
+                <div class="botoes">
+        
+                        <button>
+                            FORNECER CONTEÚDOS NA REUNIÃO
+                        </button>
+                        
+                        <div class="ou">ou</div>
+                    
+                        <button onclick="fornecerAgora()">
+                            FORNECER CONTEÚDOS AGORA
+                        </button>
+                    
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="painel" id="modal-cart">
+        <div>
+            <label for="nome">Digite seu nome:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome">
+
+            <label for="nome-empresa">Digite o nome da empresa:</label>
+            <input type="text" id="nome-empresa" placeholder="Digite o nome da empresa"> 
+
+            <button onclick="enviar()">Enviar</button>
+        </div>
+    </section>
+
+    <script>
+
+    function fornecerAgora() {
+
+        // Abrir cartModal
+        var cartModal = document.getElementById('modal-cart')
+        cartModal.style.display = 'flex'
+
+        // Fechar carModal
+        cartModal.addEventListener('click', function(event) {
+            if(event.target == cartModal) {
+                cartModal.style.display = 'none'
+            }
+        })
+    }
+
+    function enviar() {
+        var nome = document.getElementById('nome')
+        var nomeEmpresa = document.getElementById('nome-empresa')
+        console.log(nome.value.length)
+        if(nome.value.length <= 3 || nomeEmpresa.value.length < 3) {
+            alert(" Por favor digite as informações!")
+        }
+        const messageItem = `Olá, meu nome é ${nome.value}! Represento a empresa ${nomeEmpresa.value}, desejo criar meu website com seus serviços. Vamos marcar uma reunião, irei fornecer os conteúdos nela.`
+            const message = encodeURIComponent(messageItem)
+            const phone = "8186154739"
+
+            window.open(`https://wa.me/${phone}?text=${message} `, "_blank")
+    }
+
+
+    </script>
+</body>
+</html>
