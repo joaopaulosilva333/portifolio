@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/formulario.css">
+    <link rel="shortcut icon" href="../favicons/favicon2.ico" type="image/x-icon">
+    <script src="formulario.js"></script>
+    <title>Formulário do cliente</title>
+</head>
+<body>
+
+    <form class="painel2" id="modal-cart2">
+        <div>
+
+            <div class="titulos">
+                <h1>Formulário do cliente:</h1>
+                <h2>Vamos começar!</h2>
+                <p>Responda todo o formulário com base na sua  empresa e clique em "Enviar".</p>
+            </div>
+
+            <label class="pergunta" for="responsavel">1- Pessoa responsável pela empresa:</label>
+            <input class="tem-required" type="text" id="responsavel" placeholder="Responsável..." required>
+
+            <label class="pergunta" for="empresa">2- Nome da empresa:</label>
+            <input class="tem-required" type="text" id="empresa" placeholder="Não use abreviações..." required minlength="4">
+
+            <label class="pergunta" for="area-empresa">3- Em qual área sua empresa trabalha?</label>
+            <input class="tem-required" list="area" type="text" id="area-empresa" placeholder="Àrea..." required>
+            <datalist id="area">
+                <option value="Serviços de Marketing"></option>
+                <option value="Àrea da educação"></option>
+                <option value="Comercial(Loja)"></option>
+                <option value="Comercial(Super-mercado)"></option>
+                <option value="Restaurantes"></option>
+                <option value="Lanchonetes"></option>
+                <option value="Informática"></option>
+                <option value="Freelancer"></option>
+            </datalist>
+
+            <label class="pergunta" for="servico-empresa">4- Que serviço sua empresa fornece aos clientes?</label>
+            <input class="tem-required" list="servico" type="text" id="servico-empresa" placeholder="Serviço..." required>
+            <datalist id="servico">
+                <option value="Venda de produtos"></option>
+                <option value="Venda de serviços"></option>
+                <option value="Ensino"></option>
+            </datalist>
+
+            <label class="pergunta" for="como-imagina">5- Como você imagina seu site?</label>
+            <textarea style="resize: none; text-align: left;" id="como-imagina" rows="5" placeholder="EX: Bem construido e a cara da minha empresa...">
+
+            </textarea> <br>
+
+
+            <label class="pergunta" for="logo">6- Sua empresa possui uma logo-marca?</label>
+
+        
+                    <span>
+                        <input type="radio" name="logo" id="logo-sim" checked>
+                        <label for="logo-sim">SIM</label>
+                    </span>
+                    
+                    <span>
+                        <input type="radio" name="logo" id="logo-nao">
+                        <label for="logo-nao">VOU PRECISAR CRIAR</label>
+                    </span>
+                
+
+            <label class="pergunta" for="paleta-cores">7- Sua empresa possui uma paleta de cores definida?</label>
+
+                <span>
+                    <input type="radio" name="paleta" id="paleta-sim" checked>
+                    <label for="paleta-sim">SIM</label>
+                </span>
+
+                <span>
+                    <input type="radio" name="paleta" id="paleta-nao">
+                    <label for="paleta-nao">VOU PRECISAR CRIAR</label>
+                </span>
+
+                <label class="pergunta" for="fonte-texto">8- Sua empresa possui uma fonte de texto padrão?</label>
+
+                <span>
+                    <input type="radio" name="fonte" id="fonte-sim" checked>
+                    <label for="fonte-sim">SIM</label>
+                </span>
+
+                <span>
+                    <input type="radio" name="fonte" id="fonte-nao">
+                    <label for="fonte-nao">VAMOS PRECISAR ESCOLHER</label>
+                </span>
+
+                <label class="pergunta" for="imagens">9- Você possui imagens da sua empresa e dos seus produtos?</label>
+
+                <span>
+                    <input type="radio" name="imagens" id="imagens-sim" checked>
+                    <label for="imagens-sim">SIM</label>
+                </span>
+
+                <span>
+                    <input type="radio" name="imagens" id="imagens-nao">
+                    <label for="imagens-nao">VAMOS PRECISAR TIRAR ALGUMAS</label>
+                </span>
+
+                <label class="pergunta" for="slogan">10- Qual Slogan da sua empresa?</label>
+                <input class="tem-required" type="text" id="slogan" placeholder="EX: Melhor produto da região..." required>
+
+                <label class="pergunta" for="textos">11- Você possui os textos que serão ultilizados no seu site?</label>
+
+                <span>
+                    <input type="radio" name="textos" id="textos-sim" checked>
+                    <label for="textos-sim">SIM</label>
+                </span>
+
+                <span>
+                    <input type="radio" name="textos" id="textos-nao">
+                    <label for="textos-nao">NÃO, MAS VOU PROVIDENCIAR</label>
+                </span>
+
+                <label class="pergunta" for="velocidade">12- Você tem pressa na criação do seu projeto?</label>
+
+                <span>
+                    <input type="radio" name="velocidade" id="velocidade-sim" checked>
+                    <label for="velocidade-sim">SIM</label>
+                </span>
+
+                <span>
+                    <input type="radio" name="velocidade" id="velocidade-nao">
+                    <label for="velocidade-nao">NÃO, TEMPO NORMAL </label>
+                </span>
+
+                <button onclick="enviar()">Enviar</button>
+                
+        </div>
+    </form>
+
+    
+</body>
+</html>
