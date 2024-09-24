@@ -171,3 +171,14 @@ body {
         width: 300px; 
     }
 }
+
+@media (max-width: 420px) {
+    .pano-fundo img {
+        width: 200px;
+    }
+
+    .texto {
+        max-width: 350px;
+        font-size: 14px;
+    }
+}
