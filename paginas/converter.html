@@ -33,15 +33,17 @@
         
                 <div class="botoes">
         
-                        <button onclick="fornecerAgora()">
+                        <button onclick="fornecerDepois()">
                             FORNECER CONTEÚDOS NA REUNIÃO
                         </button>
                         
                         <div class="ou">ou</div>
                     
-                        <button >
-                            FORNECER CONTEÚDOS AGORA
-                        </button>
+                        <a href="formulario.html" target="_blank">
+                            <button onclick="fornecerAgora()" >
+                                FORNECER CONTEÚDOS AGORA
+                            </button>
+                        </a>
                     
                 </div>
             </div>
@@ -61,9 +63,18 @@
         </div>
     </section>
 
+    
+
     <script>
 
-    function fornecerAgora() {
+        function fornecerAgora() {
+            var cartModalDois = document.getElementById('modal-cart2')
+            cartModalDois.style.display = 'flex'
+        }
+
+
+        // PARA FORNECER O CONTEÚDO NA REUNIÃO
+    function fornecerDepois() {
 
         // Abrir cartModal
         var cartModal = document.getElementById('modal-cart')
@@ -83,12 +94,13 @@
         console.log(nome.value.length)
         if(nome.value.length <= 3 || nomeEmpresa.value.length < 3) {
             alert(" Por favor digite as informações!")
-        }
-        const messageItem = `Olá, meu nome é ${nome.value}! Represento a empresa ${nomeEmpresa.value}, desejo criar meu website com seus serviços. Vamos marcar uma reunião, irei fornecer os conteúdos nela.`
+        }else {
+        const messageItem = `Olá, meu nome é "${nome.value}!" Represento a empresa (${nomeEmpresa.value}), desejo criar meu website com seus serviços. Vamos marcar uma reunião, irei fornecer os conteúdos nela.`
             const message = encodeURIComponent(messageItem)
             const phone = "8186154739"
 
             window.open(`https://wa.me/${phone}?text=${message} `, "_blank")
+        }
     }
 
 
