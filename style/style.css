@@ -228,15 +228,6 @@ nav a:hover {
 #paralax #p2 {
     height: 100px;
 }
-@media (max-width: 500px ) {
-    div#imagem {
-        font-size: 14px;
-    }
-}
-main #minha-img {
-    width: 200px ;
-    border-radius: 10px 40px 10px 80px;
-}
 
 #apresentacao {
     display: flex;
@@ -260,8 +251,13 @@ div#imagem {
     margin: auto;
     border: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    border-radius: 10px 40px 5px 5px;
     text-align: center;
+}
+
+div#imagem img {
+    max-width: 70%;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
 #legendaImg {
@@ -650,9 +646,8 @@ footer div {
     }
 
     div#apresentacao {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
+        display: flex;
+        flex-direction: row-reverse;
     }
     div#text2 {
         max-width: 90%;
@@ -840,7 +835,7 @@ footer div {
     }
 
     div .pt-1> img {
-        width: 250px;
+        width: 220px;
         border-radius: 5px;
     }
 
@@ -862,11 +857,11 @@ footer div {
     }
 
     .recepcao h1 {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     div#logo img {
-        height: 10vh;
+        height: 7vh;
     }
 
     #abilidades #js> img {
@@ -888,6 +883,43 @@ footer div {
 
     #conteiner-contato p {
         font-size: 12px;
+    }
+}
+
+@media (max-width: 340px) {
+
+    #text2 {
+        font-size: 12px;
+    }
+
+    #text {
+        font-size: 12px;
+    }
+
+    #menu {
+        width: 150px;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .recepcao {
+        width: 80%;
+        font-size: 10px;
+    }
+
+    .recepcao h1 {
+        font-size: 10px;
+    }
+
+    .recepcao p {
+        font-size: 8px;
+        display: none;
+    }
+
+    .recepcao button {
+        max-width: 90%;
     }
 }
 
