@@ -229,12 +229,16 @@ nav a:hover {
     height: 100px;
 }
 
-#apresentacao {
+div#apresentacao {
     display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    margin-top: 100px;
+    flex-direction: row-reverse;
 }
+div#text2 {
+    max-width: 90%;
+    margin: auto;
+    margin-top: 150px;
+}
+
 
 #apresentacao p {
     font-family: var(--font-padrao);
@@ -268,10 +272,10 @@ div#imagem img {
 }
 
 div#text {
-    width: 400px;
-    margin: auto;
+    max-width: 600px;
     margin-top: 50px;
-    padding: 10px;
+    padding: 20px;
+    padding-left: 6%;
 }
 #text2 {
     opacity: 0;
@@ -298,7 +302,7 @@ div#text {
 .aside {
     background-color: #5ce1e66d ;
     font-family: var(--font-padrao);
-    width: 80%;
+    width: 600px;
     margin: auto;
     margin-top: 5%;
     padding: 5px;
@@ -373,9 +377,19 @@ div#text {
 .teste {
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
+
+.teste img {
+    transition: 0.4s;
+}
+
+.teste img:hover {
+    transform: scale(1.1);
+}
+
 div .pt-1> img {
-    width: 200px;
+    width: 80%;
 }
 .icone-github {
     background-color: var(--cor6);
@@ -384,23 +398,41 @@ div .pt-1> img {
     height: 50px;
     cursor: pointer;
 }
+
+.icone-github:hover {
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.574);
+}
+
 .icone-insta {
     max-width: 50px;
 }
 div .pt-2> p {
     margin-bottom: 30px;
 }
-.pt-2 a {
+
+.pt-2 .a {
+    text-decoration: none;
+    color: var(--cor6);
+}
+
+.pt-2 .a:hover {
+    text-decoration: underline;
+}
+
+.pt-2  .ver-projeto {
     text-decoration: none;
     color: white;
-    background-color: var(--cor5);
+    border: 1px solid var(--cor5);
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 14px;
     padding: 10px;
-    border-radius: 20px;
+    border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
+    transition: background-color 0.3s;
 }
-.pt-2 a:hover {
-    background-color: var(--cor4);
-    transition-duration: 0.4s;
+.pt-2 .ver-projeto:hover {
+    background-color: #5ce1e672;
 }
 .cursoEmVideo img {
     border-radius: 50%;
@@ -473,7 +505,14 @@ div .pt-2> p {
 }
 #icones img {
     width: 40px;
+    transition: 0.5s;
 }
+
+#icones img:hover {
+    transform: translateY(-8px);
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.632);
+}
+
 .a-youtube img {
     width: 50px;
 }
@@ -519,6 +558,7 @@ footer a {
 footer h1 {
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
+    color: var(--cor3);
 }
 footer div {
     max-width: 700px;
@@ -607,6 +647,17 @@ footer div {
 
   @media (max-width: 1000px) {
 
+    .aside {
+        max-width: 90%;
+    }
+
+    div#apresentacao {
+        display: flex;
+        flex-direction: column;
+        max-width: 100%;
+        margin-top: 100px;
+    }
+
     div#txt-papel-parede span {
         font-size: 25px;
     }
@@ -637,22 +688,6 @@ footer div {
     }
     div#imagem {
         margin-top: 100px;
-    }
-}
-  @media (min-width: 1000px) {
-
-    .aside {
-        width: 600px;
-    }
-
-    div#apresentacao {
-        display: flex;
-        flex-direction: row-reverse;
-    }
-    div#text2 {
-        max-width: 90%;
-        margin: auto;
-        margin-top: 150px;
     }
 }
 
@@ -800,12 +835,18 @@ footer div {
         font-size: 15px;
     }
 
+    .texto {
+        letter-spacing: 1px;
+        line-height: 35px;
+    }
+
     div#text {
-        width: 300px;
+        max-width: 500px;
     }
 
     div#text2 {
-        max-width: 300px;
+        max-width: 500px;
+        padding-left: 6%;
     }
 
     section#abilidades div {
